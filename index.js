@@ -16,12 +16,14 @@ mongoose.connect(config.dbUrl, {
 });
 
 app.use("/assets", express.static(path.resolve(`${dataDir}${path.sep}assets`)));
+app.use("/public", express.static(path.join(__dirname, 'public'))); //public
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.engine("html", ejs.renderFile);
-app.set("view engine", "html");
+app.set("view engine", "ejs"); // changed html -> ejs
+app.set("views", path.join(__dirname, './app_server/views')); //views scope
 app.use(helmet());
 app.use(passport.initialize());
 app.use(passport.session());
