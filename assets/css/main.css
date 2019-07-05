@@ -1,0 +1,10 @@
+body {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  background-image: url(https://www.growtopiagame.com/forums/attachment.php?attachmentid=199250&d=1527732292);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+* {
+  box-sizing: border-box;
+}
