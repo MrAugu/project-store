@@ -13,35 +13,35 @@ form {
 form input {
   border: none;
   border-radius: 2px;
-  margin: 5px;
   color: #fff;
   height: 40px;
-  padding-left: 45px;
   font-size: 15px;
-  background-color: #22222288
+  background-color: #22222288;
 }
 
 form input::placeholder {
   color: #fff;
 }
+
 form input:focus {
   outline: none;
 }
+
 form button {
   width: 125px;
   height: 35px;
   border: none;
   border-radius: 25px;
   margin-top: 10px;
+  background-color: rgb(255, 208, 0);
 }
     
 form button:hover {
-  background: gray;
+  background: rgb(224, 183, 0);
 }
     
 label {
-  display: block;
-  padding: 0.5em 1.5em 0.5em 0;
+  display: none;
 }
     
 input {
@@ -51,4 +51,19 @@ input {
 
 .login-title {
   text-align: center;
+}
+
+@media screen and (min-width: 250px) {
+  label {
+    display: block;
+    float: left;
+    position: relative;
+    left: 6%;
+    top: 30px;
+    color: #fff;
+  }
+
+  form input {
+    padding-left: 15%;
+  }
 }
