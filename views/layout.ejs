@@ -2,22 +2,38 @@
 <html lang="en">
 <head>
     <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 <div class="navbar">
     <ul>
-        <li><a href="#">BRAND</a></li>
+        <li><a href="/">BRAND</a></li>
         <li><a href="#">News</a></li>
         <li>
             <div class="search">
                 <input type="search" name="search" placeholder="Search Item Name">
             </div>
         </li>
-        <li style="float: right;"><%- username="<a href='#profile.html'>Username here</a>" %></li>
+        <li style="float: right;"><% username="admin"; %> <!-- you can define username to test after login -->
+       <% if(typeof username == 'undefined'){ %>
+           <a href="/login">
+           <%= "Sign In" %>
+           <%}else{%>
+           <a href="/profile"><%= username %>
+           <%}%>
+           </a>
+           </a></li>
       </ul>
 </div>
     <%- body %>    
+
+<div class="footer">
+<p>Project &copy www.project.com</p>
+</div>
+
 </body>
 </html>
