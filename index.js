@@ -11,6 +11,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const ejsLayouts = require("express-ejs-layouts");
+const Users = require("./models/user.js");
+const crypter = require("crypter");
 
 mongoose.connect(config.dbUrl, {
   useNewUrlParser: true
@@ -37,13 +39,17 @@ passport.deserializeUser((obj, done) => {
   done(null, obj);
 });
 
-passport.use(new LocalStrategy(function(username, password, done) {
+passport.use(new LocalStrategy(async (username, password, done) => {
   // To return authenticated: return done(null, { user_data: "MrAugu" });
   // To return failed: return done(null, false);
   if (!username) return done(null, false);
   if (!password) return done(null, false);
   
-  // Query a search to DB and compare.
+  const user = await Users.findOne({ username: username });
+  if (!user) return done(null, false);
+  if (!crypter.validate(user.password, password)) return done(null, false);
+  
+  return done(null, { username: user.username, id: user.id, email: user.email, seller: user.seller, createdAt: user.createdAt, status: user.status, verified: user.verified, confirmed: user.confirmed, banned: user.banned });
 }));
 
 app.get("/login", (req, res) => routeFile("get", "login")(req, res, renderTemplate));

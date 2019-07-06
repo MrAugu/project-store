@@ -17,7 +17,7 @@ module.exports = async (req, res, renderTemplate) => {
 
   if (emailRegExp.test(email) !== true) return renderTemplate(res, req, "pages/signup.ejs", { alert: "Invalid email address." });
   if (username.length < 3) return renderTemplate(res, req, "pages/signup.ejs", { alert: "Username is too short." });
-  if (username.name.length > 13) return renderTemplate(res, req, "pages/signup.ejs", { alert: "Username is too long." });
+  if (username.length > 13) return renderTemplate(res, req, "pages/signup.ejs", { alert: "Username is too long." });
   if (usernameRegExp.test(username) !== true) return renderTemplate(res, req, "pages/signup.ejs", { alert: "Invalid username! Only simple usernames are allowed." });
   if (password !== repeatedPassowrd) return renderTemplate(res, req, "pages/signup.ejs", { alert: "Passwords doesn't match." });
   
@@ -27,7 +27,7 @@ module.exports = async (req, res, renderTemplate) => {
   const isEmail = await Users.find({ email: email });
   if (isEmail.length > 0) return renderTemplate(res, req, "pages/signup.ejs", { alert: "This email is already used by someone else." });
 
-  const allUsers = await Users.countDocuments();
+  let allUsers = await Users.countDocuments();
 
   const newUser = new Users({
     id: allUsers++,
