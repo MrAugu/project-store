@@ -1,7 +1,7 @@
 module.exports = (req, res, renderTemplate) => {
-    /* if (req.isAuthenticated()){ */
+    if (req.isAuthenticated()){
         renderTemplate(res, req, "profile.ejs");
-    /* }else{
-        res.redirect("/");
-    } */
+     }else{
+        res.redirect("/signup");
+    }
 };

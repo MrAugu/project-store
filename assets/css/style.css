@@ -1,12 +1,13 @@
 @import url("../fontawesome/css/all.css");
 
+/* ==============  NAVBAR BEGINS  ==============  */
 .navbar ul{
   margin: 0.4rem !important;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: orange;
+  background-color: #dc3545;
   margin-bottom: 2%;
 }
 
@@ -15,7 +16,11 @@
 }
 
 .navbar li:first-child{
-  border-right: 1px solid #bbb;
+  border-right: 2px solid #ffffff;
+}
+
+.navbar li:last-child{
+  border-left: 2px solid #ffffff;
 }
 
 .navbar li a {
@@ -46,12 +51,8 @@
   text-decoration: none;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(2, 117, 170);
-  color: white;
-  text-align: center;
+form input:focus::placeholder {
+  color: rgba(0, 0, 0, 0);
 }
+
+/* <==============  NAVBAR ENDS  ==============>  */
