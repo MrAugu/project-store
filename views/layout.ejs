@@ -3,9 +3,21 @@
 <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css//main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
+<div class="container">
+    <ul>
+        <li><a href="#">BRAND</a></li>
+        <li><a href="#">News</a></li>
+        <li>
+            <div class="search">
+                <input type="search" name="search" placeholder="Search Item Name">
+            </div>
+        </li>
+        <li style="float: right;"><%- username="<a href='#profile.html'>Username here</a>" %></li>
+      </ul>
+</div>
     <%- body %>    
 </body>
 </html>

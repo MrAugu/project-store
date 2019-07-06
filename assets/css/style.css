@@ -1,61 +1,44 @@
-form {
-  padding: 1em;
-  background: #f9f9f9;
-  border: 1px solid #c1c1c1;
-  margin-top: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-  border-radius: 2px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  margin-bottom: 2%;
 }
 
-form input {
-  margin-bottom: 1rem;
-  background: #fff;
-  border: 1px solid #9c9c9c;
+li {
+  float: left;
 }
 
-form button {
-  background: lightgrey;
-  padding: 0.7em;
-  border: 0;
-  border-radius: 5px;
+li:first-child{
+  border-right: 1px solid #bbb;
 }
-  
-form button:hover {
-  background: gray;
-}
-  
-label {
-  text-align: right;
+
+li a {
   display: block;
-  padding: 0.5em 1.5em 0.5em 0;
-}
-  
-input {
-  width: 100%;
-  padding: 0.7em;
-  margin-bottom: 0.5rem;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-@media (min-width: 400px) {
-  form {
-    overflow: hidden;
-  }
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
 
-  label {
-    float: left;
-    width: 200px;
-  }
-  
-    input {
-      float: left;
-      width: calc(100% - 200px);
-    }
-  
-    button {
-      float: right;
-      width: calc(100% - 200px);
-    }
-  }
+input[type='search']{
+  font-size: 15px;
+  border: 2px solid #919191;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  color: #484848;
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
