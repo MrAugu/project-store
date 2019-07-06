@@ -8,3 +8,12 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.alert-fail {
+  color: #dc3545;
+}
+
+.container{
+  padding: 2%;
+  margin: 2%;
+}

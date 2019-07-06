@@ -50,6 +50,7 @@ app.get("/login", (req, res) => routeFile("get", "login")(req, res, renderTempla
 app.post("/login", passport.authenticate("local", { failureRedirect: '/login' }), (req, res) => routeFile("post", "login")(req, res, renderTemplate));
 app.get("/signup", (req, res) => routeFile("get", "signup")(req, res, renderTemplate));
 app.post("/signup", (req, res) => routeFile("post", "signup")(req, res, renderTemplate));
+app.get("/", (req, res) => { res.render("index.ejs"); });
 app.listen(config.port, null, null, () => console.log("Website is fully running."));
 
 function renderTemplate(res, req, template, data = {}) {
