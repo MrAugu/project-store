@@ -65,6 +65,9 @@ app.post("/login", passport.authenticate("local", { failureRedirect: '/login' })
 app.get("/signup", (req, res) => routeFile("get", "signup")(req, res, renderTemplate));
 app.post("/signup", (req, res) => routeFile("post", "signup")(req, res, renderTemplate));
 app.get("/", (req, res) => routeFile("get", "index")(req, res, renderTemplate));
+app.get("/profile", (req, res) =>{
+  routeFile("get", "profile")(req, res, renderTemplate)
+});
 
 app.listen(config.port, null, null, () => console.log("Website is fully running."));
 

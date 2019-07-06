@@ -1,21 +1,24 @@
-ul {
+@import url("../fontawesome/css/all.css");
+
+.navbar ul{
+  margin: 0.4rem !important;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: orange;
   margin-bottom: 2%;
 }
 
-li {
+.navbar li {
   float: left;
 }
 
-li:first-child{
+.navbar li:first-child{
   border-right: 1px solid #bbb;
 }
 
-li a {
+.navbar li a {
   display: block;
   color: white;
   text-align: center;
@@ -24,11 +27,11 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.navbar li a:hover {
   background-color: #111;
 }
 
-input[type='search']{
+.navbar input[type='search']{
   font-size: 15px;
   border: 2px solid #919191;
   border-top-right-radius: 5px;
