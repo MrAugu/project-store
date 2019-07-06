@@ -12,19 +12,21 @@
 <div class="navbar">
     <ul>
         <li><a href="/">BRAND</a></li>
-        <li><a href="#">News</a></li>
+        <li><a href="#">Home</a></li>
         <li>
             <div class="search">
                 <input type="search" name="search" placeholder="Search Item Name">
             </div>
         </li>
-        <li style="float: right;">
+        <li><a href="#submit">Search</a></li>
+        <li style="float: right; border-left: 2px solid #ffffff;">
             <% if (user) { %>
                 <a href="/profile?=<%= user.id %>"><%= user.username %></a>
             <% } else { %>
                 <a href="/login">Sign In</a>
             <% } %>
         </li>
+        <% if (user && user.seller) { %><li><a href="/create_ad">Create Ad</a></li><% } %>
       </ul>
 </div>
     <%- body %>    
