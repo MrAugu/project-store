@@ -13,6 +13,8 @@ const mongoose = require("mongoose");
 const ejsLayouts = require("express-ejs-layouts");
 const Users = require("./models/user.js");
 const crypter = require("crypter");
+const session = require("express-session");
+const MemoryStore = require("memorystore")(session);
 
 mongoose.connect(config.dbUrl, {
   useNewUrlParser: true
@@ -27,6 +29,14 @@ app.engine("html", ejs.renderFile);
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, "/views"));
 app.use(helmet());
+
+app.use(session({
+  store: new MemoryStore({ checkPeriod: 86400000 }),
+  secret: "#@$#^%$@#$%$#^$#%@$#!@#!@",
+  resave: false,
+  saveUninitialized: false,
+}));
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(ejsLayouts);
@@ -40,8 +50,6 @@ passport.deserializeUser((obj, done) => {
 });
 
 passport.use(new LocalStrategy(async (username, password, done) => {
-  // To return authenticated: return done(null, { user_data: "MrAugu" });
-  // To return failed: return done(null, false);
   if (!username) return done(null, false);
   if (!password) return done(null, false);
   

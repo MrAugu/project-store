@@ -18,12 +18,17 @@
                 <input type="search" name="search" placeholder="Search Item Name">
             </div>
         </li>
-        <li style="float: right;"><%  %> 
-        <!-- you can define username to test after login --><% if(typeof username == 'undefined'){ %><a href="/login"><%= "Sign In" %><%}else{%><a href="/profile"><%= username %><%}%></a></a></li>
+        <li style="float: right;">
+            <% if (user) { %>
+                <a href="/profile"><%= user.username %></a>
+            <% } else { %>
+                aaa
+                <a href="/login">Sign In</a>
+            <% } %>
+        </li>
       </ul>
 </div>
     <%- body %>    
-
 <div class="footer">
 <p>Project &copy www.project.com</p>
 </div>
