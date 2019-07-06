@@ -1,0 +1,10 @@
+<% title="Profile Page";%>
+<div class="container">
+<h1>Profile Page</h1>
+<ul>
+    <li>Username: <% if (user) { %><%= user.username %><% } %></li>
+    <li>Email: <% if (user) { %><%= user.email %><% } %></li>
+    <li>ID: <% if (user) { %><%= user.id %><% } %></li>
+</ul>
+   
+</div>

@@ -20,9 +20,8 @@
         </li>
         <li style="float: right;">
             <% if (user) { %>
-                <a href="/profile"><%= user.username %></a>
+                <a href="/profile?=<%= user.id %>"><%= user.username %></a>
             <% } else { %>
-                aaa
                 <a href="/login">Sign In</a>
             <% } %>
         </li>

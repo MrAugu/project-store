@@ -3,6 +3,7 @@ body {
   background-image: url(https://www.growtopiagame.com/forums/attachment.php?attachmentid=199250&d=1527732292);
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
 }
   
 * {
@@ -16,4 +17,23 @@ body {
 .container{
   padding: 2%;
   margin: 2%;
+  background-color: white;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.container-fluid{
+  width: 100vh;
+  background-color: white;
+}
+
+.jumbotron{
+  background: orange;
+  margin: 5%;
+}
+
+.jumbotron-fluid{
+  background: orange;
 }
