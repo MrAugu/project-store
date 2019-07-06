@@ -1,9 +1,19 @@
 <% title="Profile Page";%>
-<div class="container bg-dark">
-<h1>Profile Page</h1>
-<ul style="list-style: none; display: inline">
-    <li>Username: <% if (user) { %><%= user.username %><% } %></li>
-    <li>Email: <% if (user) { %><%= user.email %><% } %></li>
+<div class="container container-flex bg-dark">
+<h1></h1>
+<ul style="list-style: none;">
+    <li><p>Username:</p> <% if (user) { %><%= user.username %><% } %></li>
+    <li><p>Email:</p> <% if (user) { %><%= user.email %><% } %></li>
 </ul>
    
 </div>
+<style>
+h1::before{
+    content: 'Profile Page';
+}
+
+ul p{
+    font-weight: bold; 
+    display: inline;
+}
+</style>
