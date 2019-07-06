@@ -1,4 +1,4 @@
-@import url("../fontawesome/css/all.css");
+@import url("../fontawesome/css/all.min.css");
 
 /* ==============  NAVBAR BEGINS  ==============  */
 .navbar ul{
@@ -33,17 +33,30 @@
 }
 
 .navbar input[type='search']{
-  font-size: 15px;
+  /* font-size: 15px;
   border: 2px solid #dc3545;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: white;
   color: #484848;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 16px; */
+  background-color: inherit;
+  border: 1px solid #a02430;
+  height: 30px;
+  position: relative;
+  top: 8px;
+  border-radius: 3px;
+  width: 180px;
+  padding-left: 5px;
+  padding-right: 10px;
 }
 
-form input:focus::placeholder {
+.navbar input[type='search']::placeholder {
+  color: #ffffff;
+}
+
+.navbar input[type='search']:focus::placeholder {
   color: rgba(0, 0, 0, 0);
 }
 

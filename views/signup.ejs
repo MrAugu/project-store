@@ -1,16 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/form.css">
 <% title = "Sign Up" %>
 <div class="container">
   <% if (alert) { %>
   <p class="alert-fail"><%- alert %></p>
   <% } %>
   <form method="POST">
-    <label for="email">E-mail: </label>
-    <input name="email" type="text" placeholder="E-mail"><br>
-    <label for="username">Username: </label>
-    <input name="username" type="text" placeholder="Username"><br>
-    <label for="password">Password: </label>
-    <input name="password" type="password" placeholder="Password"><br>
-    <label for="repeat-password">Repeat Password: </label>
+    <h1 class="form-title">~ Sign Up ~</h1>
+    <label for="email"><i class="fas fa-envelope"></i></label>
+    <input name="email" type="text" placeholder="E-mail">
+    <label for="username"><i class="fas fa-user"></i></label>
+    <input name="username" type="text" placeholder="Username">
+    <label for="password"><i class="fas fa-lock"></i></label>
+    <input name="password" type="password" placeholder="Password">
+    <label for="repeat-password"><i class="fas fa-lock"></i></label>
     <input name="repeat-password" type="password" placeholder="Password">
     <button type="submit">Sign Up</button>
   </form>
