@@ -9,27 +9,52 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-<nav class="navbar">
-    <ul>
-        <li><a href="/">BRAND</a></li>
-        <li><a href="#">Home</a></li>
-        <li>
-            <div class="search">
-                <input type="search" name="search" placeholder="Search Item Name">
-            </div>
-        </li>
-        <li><a href="#submit">Search</a></li>
-        <li style="float: right; border-left: 2px solid #ffffff;">
-            <% if (user) { %>
-                <a href="/profile?=<%= user.id %>"><%= user.username %></a>
-            <% } else { %>
-                <a href="/login">Sign In</a>
-            <% } %>
-        </li>
-        <% if (user && user.seller) { %><li><a href="/create_ad">Create Ad</a></li><% } %>
-      </ul>
-    </nav>
+    <div class="header-container">
+        <header>
+            <p class="logo"><strong>GT Marketplace</strong></p>    
+           <nav>
+                <a href="#" class="hide-desktop"><i class="fas fa-bars menus menu-btn" id="menu"></i></a>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop"><i class="fas fa-times exit-btn"></i></li>
+                    <li><a href="/">Home</a></li>
+                    <% if (!user) { %>
+                    <li><a href="/login">Login</a></li>
+                    <% } else { %>
+                    <li><a href="/new">New Ad</a></li>
+                    <li><a href="/profile"><%= user.username %></a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                    <% } %>
+                </ul>
+            </nav>
+        </header>
+            <section><br>
+                <h6 class="header-title">Growtopia Marketplace</h6>
+                <p class="header-subtitle">Find the item you need.</p>
+                <form action="/search" method="GET">
+                    <input type="search" class="header-input" name="name" placeholder="Enter a name..."><br>
+                    <button type="submit" class="header-btn">Search</button>
+                </form>
+            </section>
+    </div>
     <%- body %>    
+    <script>
+            var d = document;
+            var menu = d.getElementById("menu");
+            var nav = d.getElementById("nav");
+            var exit = d.getElementById("exit");
+    
+            menu.addEventListener("click", (e) => {
+                nav.classList.toggle("hide-mobile");
+                menu.classList.toggle("hidden");
+                e.preventDefault();
+            });
+    
+            exit.addEventListener("click", (e) => {
+                nav.classList.toggle("hide-mobile");
+                menu.classList.toggle("hidden");
+                e.preventDefault();
+            });
+        </script>
 <div class="footer">
 <p>Copyright &copy 2019 Project Store</p>
 </div>
