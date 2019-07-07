@@ -1,15 +1,5 @@
 @import url("../fontawesome/css/all.min.css");
 
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
-
-body {
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    background-color: #2a2d32;
-    color: #ffffff;
-}
-
 textarea:focus, input:focus{
     outline: none;
 }
