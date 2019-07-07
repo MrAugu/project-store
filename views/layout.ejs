@@ -11,14 +11,14 @@
 <body>
     <div class="header-container">
         <header>
-            <p class="logo"><strong>GT Marketplace</strong></p>    
+            <p class="logo"><a href="/" id="brand"></a></p>
            <nav>
                 <a href="#" class="hide-desktop"><i class="fas fa-bars menus menu-btn" id="menu"></i></a>
                 <ul class="show-desktop hide-mobile" id="nav">
                     <li id="exit" class="exit-btn hide-desktop"><i class="fas fa-times exit-btn"></i></li>
                     <li><a href="/">Home</a></li>
                     <% if (!user) { %>
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup#footer">Sign Up</a></li>
                     <% } else { %>
                     <li><a href="/new">New Ad</a></li>
                     <li><a href="/profile"><%= user.username %></a></li>
@@ -55,8 +55,8 @@
                 e.preventDefault();
             });
         </script>
-<div class="footer">
-<p>Copyright &copy 2019 Project Store</p>
+<div id="footer" class="footer">
+<p>Copyright &copy 2019 Project Store <br> All item contents and graphics owned by Ubisoft Entertainment®</p>
 </div>
 
 </body>

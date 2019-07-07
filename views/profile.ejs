@@ -1,12 +1,12 @@
 <% title="Profile Page";%>
 <div class="container container-flex bg-dark">
-<h1></h1>
-<ul style="list-style: none;">
+<div style="margin-right: 20px;"><h1></h1></div>
+<div><ul style="list-style: none;">
     <li><p>Username: </p><%= user.username %></li>
     <li><p>Email: </p> <%= user.email %> (<a href="/changemail?=<%= user.id %>">Change Mail</a>) </li>
     <li><a href="/changepassword">Change Password</a></li>
 </ul>
-   
+</div>
 </div>
 <style>
 h1::before{

@@ -231,3 +231,13 @@ nav ul li a:hover {
         border-bottom: 2px solid #FFFFFF;
     }
 }
+
+#brand{
+    text-decoration: none;
+}
+
+#brand::before{
+    color: white;
+    font-weight: bold;
+    content: 'GT Martketplace';
+}

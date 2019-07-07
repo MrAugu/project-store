@@ -1,4 +1,4 @@
-form {
+.userform form {
   padding: 1em;
   background: none;
   max-width: 300px;
@@ -9,7 +9,7 @@ form {
   text-align: center;
 }
   
-form input {
+.userform form input {
   border: none;
   border-radius: 2px;
   color: #fff;
@@ -19,15 +19,15 @@ form input {
   background-color: #22222288;
 }
 
-form input::placeholder {
+.userform form input::placeholder {
   color: #fff;
 }
 
-form input:focus {
+.userform form input:focus {
   outline: none;
 }
 
-form button {
+.userform form button {
   width: 125px;
   height: 35px;
   border: none;
@@ -37,7 +37,7 @@ form button {
   
 }
     
-form button:hover {
+.userform form button:hover {
   background: rgb(206, 206, 13);
   border: 1px solid black;
   cursor: pointer;
@@ -47,16 +47,16 @@ form button:hover {
   transition: all 0.4s;
 }
     
-label {
+.userform label {
   display: none;
 }
     
-input {
+.userform input {
   width: 100%;
   padding: 0.7em;
 }
 
-.form-title {
+.userform .form-title {
   text-align: center;
   color: #fff;
 }
@@ -69,11 +69,11 @@ input {
   margin-right: auto;
 }
 
-form a{
+.userform form a{
   font-size: 15px;
 }
 
-#v{
+.userform #v{
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -82,7 +82,7 @@ form a{
   padding: 1%;
 }
 
-#v:hover{
+.userform #v:hover{
   background-color: white;
   color: blueviolet;
   border-radius: 5px;
@@ -93,7 +93,7 @@ form a{
 }
 
 @media screen and (min-width: 310px) {
-  label {
+  .userform label {
     display: block;
     float: left;
     position: relative;
@@ -102,7 +102,7 @@ form a{
     color: #fff;
   }
 
-  form input {
+  .userform form input {
     padding-left: 15%;
     margin-top: 0px;
   }
