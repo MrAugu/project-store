@@ -34,10 +34,17 @@ form button {
   border-radius: 25px;
   margin-top: 10px;
   background-color: rgb(255, 208, 0);
+  
 }
     
 form button:hover {
-  background: rgb(224, 183, 0);
+  background: rgb(206, 206, 13);
+  border: 1px solid black;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
     
 label {
@@ -52,6 +59,37 @@ input {
 .form-title {
   text-align: center;
   color: #fff;
+}
+
+.container{
+  margin-top: 5%;
+  background-color: tomato;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form a{
+  font-size: 15px;
+}
+
+#v{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+#v:hover{
+  background-color: white;
+  color: blueviolet;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 @media screen and (min-width: 310px) {
